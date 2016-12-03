@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Department of Electronics and Communication</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	    <link rel="stylesheet" type="text/css" href="css/materialize.css" media="screen">
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	    <script type="text/javascript" src="js/materialize.min.js"></script>
+	</head>
+	<body>
+		<div class="row valign-wrapper">
+			<div class="col m2 hide-on-small-only"> 
+				<div class="right">
+					<img class="responsive-img" src="images/CEG_logo.png" width="100" height="100" alt="CEG logo">
+				</div>
+			</div>
+			<div class="col s12 m8">
+				<div class="center-align">
+					<h4>Department of Electronics and Communication</h4>
+					<h6><a href="https://www.annauniv.edu/" target="_blank">Anna university</a></h6>
+				</div>
+			</div>
+			<div class="col m2 l2 hide-on-small-only">
+					
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="row">
+			<nav class="z-depth-0">
+				<div class="nav-wrapper">
+					<a class="brand-logo left" href="/" class="left"><i class="material-icons">home</i></a>
+					<a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+					<ul id="nav-mobile" class="right hide-on-med-and-down">
+						<li><a class="dropdown-button" data-constrainwidth="false" data-hover="true" data-beloworigin="true" data-activates="acad" href="#!">ACADEMICS<i class="material-icons right">arrow_drop_down</i></a></li>
+						<li><a class="dropdown-button" data-constrainwidth="false" data-hover="true" data-beloworigin="true" data-activates="people" href="#!">PEOPLE<i class="material-icons right">arrow_drop_down</i></a></li>
+						<li><a href="/infra">INFRASTRUCTURE</a></li>
+						<li><a class="dropdown-button" data-constrainwidth="false" data-hover="true" data-beloworigin="true" data-activates="acti" href="#!">ACTIVITIES<i class="material-icons right">arrow_drop_down</i></a></li>
+						<li><a href="/ecea">ECEA</a></li>
+						<li><a href="/placements">PLACEMENTS</a></li>
+						<li><a href="/contact">CONTACT US</a></li>
+						<li><a href="/forum">FORUM</a></li>
+					</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<ul class="collapsible">
+							<li><a class="collapsible-header" href="#!">ACADEMICS<i class="material-icons right">arrow_drop_down</i></a>
+					            <div class="collapsible-body">
+	             					<ul>
+										<li><a href="/ug">UG Programs</a></li>
+	  									<li><a href="/pg">PG Programs</a></li>
+	  									<li><a href="/part">Part-time</a></li>
+	             					</ul>
+	            				</div>
+							</li>
+						</ul>
+						<ul class="collapsible">
+							<li><a class="collapsible-header" href="#!">PEOPLE<i class="material-icons right">arrow_drop_down</i></a>
+					            <div class="collapsible-body">
+	              					<ul>
+										<li><a href="/staff">Teaching Staff</a></li>
+	  									<li><a href="/nstaff">Non-Teaching Staff</a></li>
+	  									<li><a href="/students">Students</a></li>
+	             					</ul>
+	            				</div>
+							</li>
+						</ul>							
+						<li><a href="/infra">INFRASTRUCTURE</a></li>
+						<ul class="collapsible">
+							<li><a class="collapsible-header" href="#!">ACTIVITIES<i class="material-icons right">arrow_drop_down</i></a>
+					            <div class="collapsible-body">
+	              					<ul>
+			 							<li><a href="/workshop">Workshops</a></li>
+			 							<li><a href="/fv">Foriegn visits</a></li>
+	           						</ul>
+	           					</div>
+							</li>
+						</ul>														
+						<li><a href="/ecea">ECEA</a></li>
+						<li><a href="/placements">PLACEMENTS</a></li>
+						<li><a href="/contact">CONTACT US</a></li>
+						<li><a href="/forum">FORUM</a></li>
+					</ul>
+					<ul id="acad" class="dropdown-content">
+  						<li><a href="/ug">UG Programs</a></li>
+  						<li><a href="/pg">PG Programs</a></li>
+  						<li><a href="/part">Part-time</a></li>
+					</ul>
+					<ul id="people" class="dropdown-content">
+  						<li><a href="/staff">Teaching Staff</a></li>
+  						<li><a href="/nstaff">Non-Teaching Staff</a></li>
+  						<li><a href="/students">Students</a></li>
+					</ul>
+					<ul id="acti" class="dropdown-content">
+  						<li><a href="/workshop">Workshops</a></li>
+  						<li><a href="/fv">Foriegn visits</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="divider"></div>
+		</div>
+		<br>
+		<div class="row">
+			<center><h1 id="title">Professors</h1></center>
+			<hr><br>
+			<div class="col m12" id="professors"></div>
+			<div class="col m12" id="contents"></div>
+		</div>
+		 <div class="fixed-action-btn toolbar">
+		 <a class="btn-floating btn-large red">
+	      <i class="large material-icons">mode_edit</i>
+	    </a>
+		    <ul>
+		      <li class="waves-effect waves-light"><a href="#!" id="prof">Proffesors</a></li>
+		      <li class="waves-effect waves-light"><a href="#!" id="asc">Associate Proffesors</a></li>
+		      <li class="waves-effect waves-light"><a href="#!" id="ass">Assistant Proffesors</a></li>
+		      <li class="waves-effect waves-light"><a href="#!" id="tf">Teaching Fellows</a></li>
+		    </ul>
+		  </div>
+  	</body>
+  	<script type="text/javascript">
+
+  		var person="Professors";
+
+  		$(document).ready(function() {
+		 getDetails();
+		});
+		  		
+  		$("#prof").click(function() {
+        	person = "Professors";
+        	$("#professors").empty();
+        	$("#title").text("Professors");
+        	getDetails();
+    	});
+
+    	$("#asc").click(function() {
+        	person = "Associate";
+        	$("#professors").empty();
+        	$("#title").text("Associate Professors");
+        	getDetails();
+    	});
+
+    	$("#ass").click(function() {
+        	person = "Assistant";
+        	$("#professors").empty();
+        	$("#title").text("Assistant Professors");
+        	getDetails();
+    	});
+
+    	$("#tf").click(function() {
+        	person = "TF";
+        	$("#professors").empty();
+        	$("#title").text("Teaching Fellows");
+        	getDetails();
+    	});
+
+    	function getDetails(){
+    		$.getJSON('json/staff.json', function(data) { 
+  			var professors = data[person];
+		    //console.log(professors);
+		    for(var i=0; i<professors.length; i++){
+                var prof = professors[i];
+                //console.log("name10");
+                $("#professors").append("<div class='col s12 m3'><div class='card'><div class='card-image waves-effect waves-block waves-light'><img class='activator' src='"+prof.photo+"' height='150'></div><div class='card-content'><span class='card-title activator grey-text text-darken-4' id='"+i+"'>Name<i class='material-icons right'>more_vert</i></span><p><a href='#' id='email"+i+"'>email</a></p></div><div class='card-reveal'><span class='card-title grey-text text-darken-4' id='name1"+i+"'></span><p id='areas"+i+"'><b>Areas of interest:</b><br><br></p></div></div></div>");
+                $("#professors").find("#"+i).html(prof.name);
+                $("#professors").find("#name1"+i).html("<b>"+prof.name+"</b>");
+                $("#professors").find("#email"+i).html(prof.email);
+                for(var j=0; j<prof.areas.length; j++){
+                	$("#professors").find("#areas"+i).append(prof.areas[j]+"<br><br>");
+            	}
+            	$("#professors").find("#areas"+i).append("<a class='waves-effect waves-light btn' href='#more'>More</a><br>");
+            	$("#professors").find("#areas"+i).append("<p>Click on top right to close.</p>");
+
+                $('a[href="#more"]').click(function(){
+		        	$("#contents").append("<div id='articlepanel'><div class='button123-div'><center><button type='button' class='btn btn-link btn-lg' id='close'>Close</button></center></div></div>");
+		        	$(".btn-link").click(function(){
+		        		$("#contents").empty();
+		        	});
+	    		});
+
+            }
+		});
+
+    	}
+
+
+  	</script>
+</html>
