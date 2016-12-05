@@ -118,6 +118,7 @@
 		      <li class="waves-effect waves-light"><a href="#!" id="tf">Teaching Fellows</a></li>
 		    </ul>
 		  </div>
+
   	</body>
   	<script type="text/javascript">
 
@@ -155,33 +156,61 @@
         	getDetails();
     	});
 
+    	var prof,professors;
+
     	function getDetails(){
     		$.getJSON('json/staff.json', function(data) { 
-  			var professors = data[person];
+  			professors = data[person];
 		    //console.log(professors);
 		    for(var i=0; i<professors.length; i++){
-                var prof = professors[i];
+                prof = professors[i];
                 //console.log("name10");
                 $("#professors").append("<div class='col s12 m3'><div class='card'><div class='card-image waves-effect waves-block waves-light'><img class='activator' src='"+prof.photo+"' height='150'></div><div class='card-content'><span class='card-title activator grey-text text-darken-4' id='"+i+"'>Name<i class='material-icons right'>more_vert</i></span><p><a href='#' id='email"+i+"'>email</a></p></div><div class='card-reveal'><span class='card-title grey-text text-darken-4' id='name1"+i+"'></span><p id='areas"+i+"'><b>Areas of interest:</b><br><br></p></div></div></div>");
                 $("#professors").find("#"+i).html(prof.name);
-                $("#professors").find("#name1"+i).html("<b>"+prof.name+"</b>");
+                $("#professors").find("#name1"+i).html("<b>"+prof.name+"</b><i class='material-icons right'>close</i>");
                 $("#professors").find("#email"+i).html(prof.email);
                 for(var j=0; j<prof.areas.length; j++){
                 	$("#professors").find("#areas"+i).append(prof.areas[j]+"<br><br>");
             	}
-            	$("#professors").find("#areas"+i).append("<a class='waves-effect waves-light btn' href='#more'>More</a><br>");
-            	$("#professors").find("#areas"+i).append("<p>Click on top right to close.</p>");
-
-                $('a[href="#more"]').click(function(){
-		        	$("#contents").append("<div id='articlepanel'><div class='button123-div'><center><button type='button' class='btn btn-link btn-lg' id='close'>Close</button></center></div></div>");
-		        	$(".btn-link").click(function(){
-		        		$("#contents").empty();
-		        	});
-	    		});
+            	$("#professors").find("#areas"+i).append("<a class='waves-effect waves-light btn' href='#more' onclick='popup(this);'>More</a>");
+            	//$("#professors").find("#areas"+i).append("<p>Click on top right to close.</p>");
 
             }
 		});
 
+    	}
+
+    	function popup(i){
+
+    		var tr = i.parentNode.getAttribute('id');
+        	i = tr.charAt(5) ;
+
+    		$("#contents").append("<div id='articlepanel'><br><center><img class='activator' src='"+professors[i].photo+"' height='150'><h3>"+professors[i].name+"</h3></center><hr><div class='row'><div class='col s12'><ul class='tabs'><li class='tab col s3'><a href='#test1'>Test 1</a></li><li class='tab col s3'><a href='#test2'>Test 2</a></li><li class='tab col s3'><a href='#test3'>Test 3</a></li><li class='tab col s3'><a href='#test4'>Test 4</a></li></ul></div></div><iframe id='details' width='1060' height='500' frameborder='0'><p>Your browser does not support iframes.</p></iframe><div class='button123-div'><center><br><button type='button' class='btn btn-link btn-lg' id='close'>Close</button></center></div></div>");
+
+		        $('ul.tabs').tabs();
+
+		        $('a[href="#test2"]').click(function(){
+			        //alert("Hello2");
+			        document.getElementById('details').src = "articles/article2.html";
+			     });
+
+			     $('a[href="#test3"]').click(function(){
+			        //alert("Hello3");
+			        document.getElementById('details').src = "articles/article3.html";
+			     });
+			     $('a[href="#test4"]').click(function(){
+			        //alert("Hello4");
+			        document.getElementById('details').src = "articles/article4.html";
+			     });
+			     $('a[href="#test1"]').click(function(){
+			        //alert("Hello1");
+			        document.getElementById('details').src = "articles/article1.html";
+			     });
+
+			     $('.btn-link').click(function(){
+			     	$('#contents').empty();
+			     });
+		        	
     	}
 
 
